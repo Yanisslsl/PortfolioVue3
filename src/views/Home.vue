@@ -5,13 +5,22 @@
 
 <script>
 import { Options, Vue } from 'vue-class-component';
+import { useStore } from 'vuex'
+import { key } from '../store/store'
 // @ is an alias to /src
 
 
 export default class Home extends Vue {
 
+ 
+     store = useStore(key)
+
+    // typed as number
+ 
+
 
   mounted (){
+    console.log(this.store.state.isLandingPageCleared)
 
    
  
@@ -64,8 +73,13 @@ const init = () => {
     showMainAnimation(container);
     setTimeout(() => {
       
-      // this.$router.push({path: 'About'})
+      // this.$router.push({path: 'about'})
       container.style.display = 'none'
+      const page1 = document.getElementById('mainpage');
+      const page2 = document.getElementById('secondpage')
+      page1.classList.remove('hidden')
+      page2.classList.remove('hidden')
+       
     },4000)
     console.log(this.$router)
   }, loadingAnimationTime + 100)
@@ -90,9 +104,9 @@ body {
 }
 
 :root {
-  --contrast: #031163;
-  --bgColor: #1978a5;
-  --fontColor: #031163;
+  --contrast: white;
+  --bgColor: #EA675A;
+  --fontColor: white;
 }
 
 #main {
