@@ -34,7 +34,7 @@ const showMainAnimation = (parent) => {
   box.classList.add("box", "flex");
   parent.appendChild(boxContainer);
   boxContainer.appendChild(box);
-  const quote = ["Simple", "is", "the", "new", "sexy"];
+  const quote = ["Des", "solutions", "pour", "tous", "vos", "projets"];
   let delay = 0;
   // Add all the words
   for (let word in quote){
@@ -105,7 +105,7 @@ body {
 
 :root {
   --contrast: white;
-  --bgColor: #EA675A;
+  --bgColor: #212E53;
   --fontColor: white;
 }
 
@@ -149,7 +149,7 @@ body {
   height: 12px;
   width: 12px;
   background-color: #f95959;
-  margin-left: -16px;
+  margin-left: -6px;
   margin-top: 28px;
   opacity: 0;
   animation: rotate-fs 1800ms cubic-bezier(0.5, 1, 0.89, 1) forwards;
